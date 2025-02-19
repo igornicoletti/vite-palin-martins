@@ -26,8 +26,8 @@ export const App = () => {
 
       {/* Sectors */}
       <div className="mx-auto w-full min-w-0 max-w-4xl">
-        <div className="pt-12 text-center space-y-2">
-          <h1 className="scroll-m-20 text-3xl md:text-4xl font-semibold tracking-tight">Nossas especialidades</h1>
+        <div className="pt-12 mb:pt-32 text-center space-y-2">
+          <h1 className="scroll-m-20 text-3xl md:text-5xl font-semibold tracking-tight">Nossas expertizes</h1>
           <p className="text-base text-muted-foreground">Compreendemos que cada setor possui suas particularidades e desafios únicos. Por isso, nos especializamos em oferecer soluções personalizadas para cada parceiro.</p>
         </div>
         <div className='pb-12 md:pb-32 pt-8'>
@@ -36,7 +36,7 @@ export const App = () => {
               {sectorData.map((sector, i) => (
                 <CarouselItem key={i} className="pl-1 md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
-                    <Card>
+                    <Card className='py-2'>
                       <CardHeader>
                         <CardTitle>{sector.title}</CardTitle>
                         <CardDescription>{sector.description}</CardDescription>
@@ -58,9 +58,24 @@ export const App = () => {
         </div>
       </div>
 
+      {/* Contact */}
+      <div className="bg-black py-20">
+        <div className="mx-auto w-full min-w-0 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div className="pt-12 mb:pt-32 text-left space-y-2">
+              <h1 className="scroll-m-20 text-3xl md:text-5xl font-semibold tracking-tight text-white">Entre em contato</h1>
+              <p className="text-base text-muted-foreground">Pronto para explorar o que podemos fazer juntos? Nossa equipe está a apenas um bate-papo de distância!</p>
+            </div>
+            <div className='pb-12 md:pb-32 pt-8'>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* FAQ */}
       <div className="mx-auto w-full min-w-0 max-w-5xl">
-        <div className="pt-12 text-left space-y-2">
+        <div className="pt-12 md:pt-32 text-left space-y-2">
           <h1 className="scroll-m-20 text-3xl md:text-4xl font-semibold tracking-tight">Perguntas frequentes</h1>
           <p className="text-base text-muted-foreground">Precisa de ajuda? Estamos aqui para você!</p>
         </div>

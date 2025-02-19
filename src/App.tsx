@@ -26,9 +26,9 @@ export const App = () => {
 
       {/* Sectors */}
       <div className="mx-auto w-full min-w-0 max-w-4xl">
-        <div className="pt-12 mb:pt-32 text-center space-y-2">
+        <div className="pt-12 md:pt-32 text-center space-y-2">
           <h1 className="scroll-m-20 text-3xl md:text-5xl font-semibold tracking-tight">Nossas expertizes</h1>
-          <p className="text-base text-muted-foreground">Compreendemos que cada setor possui suas particularidades e desafios únicos. Por isso, nos especializamos em oferecer soluções personalizadas para cada parceiro.</p>
+          <p className="text-base text-muted-foreground px-16">Compreendemos que cada setor possui suas particularidades e desafios únicos. Por isso, nos especializamos em oferecer soluções personalizadas para cada parceiro.</p>
         </div>
         <div className='pb-12 md:pb-32 pt-8'>
           <Carousel className="w-full">

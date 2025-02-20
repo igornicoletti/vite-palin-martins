@@ -20,6 +20,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { CircleDollarSign, LineChart, Receipt, Scale, ShieldCheck } from 'lucide-react'
+import { NavigationMenuDemo } from './components/NavigationMenuDemo'
 import { Button } from './components/ui/button'
 
 export const App = () => {
@@ -28,56 +29,29 @@ export const App = () => {
       <div className="relative flex min-h-svh flex-col bg-background">
 
         <header className="border-grid sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container-wrapper">
-            <div className="container flex h-16 items-center px-6 md:px-8">
+          <div className="mx-auto w-full min-w-0 max-w-7xl flex h-20 items-center px-6 md:px-8">
 
-              <div className="hidden md:flex space-x-16">
-                <a href="/" className="flex items-center gap-2 lg:mr-16">
-                  <img className='h-full max-h-11 w-auto' src="/palin-martins-black.png" alt="" />
-                </a>
-
-                <nav className="-mb-1 flex items-center gap-4 text-sm xl:gap-6">
-                  <a href="/" className="transition-colors text-foreground hover:text-gold">
-                    Sobre nós
-                  </a>
-                  <a href="/" className="transition-colors text-foreground hover:text-gold">
-                    Components
-                  </a>
-                </nav>
-              </div>
-
-              <div className="flex flex-1 items-center justify-between gap-2 md:justify-end">
-                <nav className="flex items-center gap-0.5">
-                  <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground py-2 group/toggle h-8 w-8 px-0">
-                    <p>asd</p>
-                    <span className="sr-only">Toggle theme</span>
-                  </button>
-                </nav>
-              </div>
-
+            <div className="flex items-center justify-between gap-2">
+              <a href="/" className="flex items-center gap-2 lg:mr-16">
+                <img className='h-full max-h-14 w-auto' src="/palin-martins-black.png" alt="" />
+              </a>
+              <NavigationMenuDemo />
             </div>
           </div>
         </header>
-
-
 
         <main className="flex flex-1 flex-col">
           {/* About us */}
           <section className="border-grid border-b">
             <div className="mx-auto w-full min-w-0 max-w-7xl">
-              <div className="py-16 px-6 md:py-32 md:px-8 space-y-10">
+              <div className="py-16 px-6 md:py-32 md:px-8 space-y-16">
                 <h2 className="mb-2 text-sm font-medium text-gold">Quem somos</h2>
-                <h1 className="scroll-m-20 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tighter">Excelência em consultoria tributária</h1>
-                <div className=' space-y-4'>
-                  <p className="max-w-2xl text-lg font-light text-foreground">Com mais de 20 anos de experiência, a Palin & Martins é uma consultoria tributária de referência, sediada em São José do Rio Preto, São Paulo.</p>
-                  <p className="max-w-2xl text-lg font-light text-foreground">Nossa equipe, altamente qualificada, atende pessoas físicas e jurídicas, destacando-se na recuperação de créditos de ICMS, por alcançar resultados expressivos para nossos clientes, além de atuar em Compliance Tributário, recuperação de tributos federais e serviços jurídicos.</p>
-                  <p className="max-w-2xl text-lg font-light text-foreground">Sempre embasados na legislação, garantimos segurança e sustentabilidade para seu negócio.</p>
-                  <p className="max-w-2xl text-lg font-light text-foreground">Nosso compromisso é identificar as necessidades de cada cliente, proporcionando soluções personalizadas e eficazes que fortalecem seus negócios e garantem plena satisfação.</p>
-                </div>
-                <div className="flex w-full items-center justify-start gap-2 pt-2">
-                  <a className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs" href="/blocks">
-                    Browse Blocks
-                  </a>
+                <h1 className="max-w-xl scroll-m-20 text-3xl md:text-4xl lg:text-6xl font-bold leading-tight tracking-tighter">Excelência em consultoria tributária</h1>
+                <div className='max-w-xl space-y-4'>
+                  <p className="text-blase/7 font-light text-foreground">Com mais de 20 anos de experiência, <span className='font-medium'>a Palin & Martins é uma consultoria tributária de referência</span>, sediada em São José do Rio Preto, São Paulo.</p>
+                  <p className="text-blase/7 font-light text-foreground">Nossa <span className='font-medium'>equipe, altamente qualificada</span>, atende pessoas físicas e jurídicas, destacando-se na recuperação de créditos de ICMS, por alcançar <span className='font-semibold'>resultados expressivos para nossos clientes</span>, além de atuar em Compliance Tributário, recuperação de tributos federais e serviços jurídicos.</p>
+                  <p className="text-blase/7 font-light text-foreground">Sempre embasados na legislação, <span className='font-medium'>garantimos segurança e sustentabilidade</span> para seu negócio.</p>
+                  <p className="text-blase/7 font-light text-foreground">Nosso compromisso é identificar as necessidades de cada cliente, proporcionando <span className='font-medium'>soluções personalizadas e eficazes que fortalecem seus negócios</span> e garantem plena satisfação.</p>
                 </div>
               </div>
             </div>
@@ -85,8 +59,9 @@ export const App = () => {
 
           {/* Expertise Tributária */}
           <div className="mx-auto w-full min-w-0 max-w-6xl">
-            <div className="py-16 px-6 md:py-32 md:px-8 space-y-10">
+            <div className="py-16 px-6 md:py-32 md:px-8 space-y-16">
               <div className="mx-auto max-w-2xl space-y-4">
+                <h2 className="mb-2 text-sm font-medium text-gold md:text-center">Soluções personalizadas</h2>
                 <h1 className="scroll-m-20 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tighter md:text-center">Expertise Tributária</h1>
                 <p className="max-w-2xl text-center text-lg text-muted-foreground">Cada segmento tem desafios e necessidades específicas. Por isso, oferecemos consultoria especializada e soluções tributárias personalizadas para otimizar sua gestão fiscal e impulsionar o crescimento do seu negócio.</p>
               </div>
@@ -126,11 +101,11 @@ export const App = () => {
           {/* Contact us */}
           <div className="bg-foreground">
             <div className="mx-auto w-full min-w-0 max-w-7xl">
-              <div className="py-16 px-6 md:py-32 md:px-8 space-y-10">
+              <div className="py-16 px-6 md:py-32 md:px-8 space-y-16">
                 <div className="max-w-2xl space-y-4">
                   <h2 className="text-sm font-medium text-gold">Fale conosco</h2>
                   <h1 className="scroll-m-20 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tighter text-popover">Entre em contato</h1>
-                  <p className="max-w-2xl text-left text-lg text-muted-foreground">Precisa de soluções para otimizar a gestão e potencializar os resultados do seu negócio? Fale conosco e descubra como nossa expertise pode impulsionar o seu crescimento com segurança e eficiência.!</p>
+                  <p className="max-w-xl text-left text-lg text-muted-foreground">Precisa de soluções para otimizar a gestão e potencializar os resultados do seu negócio? Fale conosco e descubra como nossa expertise pode impulsionar o seu crescimento com segurança e eficiência.!</p>
                 </div>
                 <div className=''>
                 </div>
@@ -142,9 +117,8 @@ export const App = () => {
           <div className="mx-auto w-full min-w-0 max-w-6xl">
             <div className="py-16 px-6 md:py-32 md:px-8 space-y-10">
               <div className="max-w-2xl space-y-4">
-                <h2 className="text-sm font-medium text-gold">FAQ?</h2>
-                <h1 className="scroll-m-20 text-3xl md:text-4xl lg:text-4xl font-bold leading-tight tracking-tighter">Perguntas frequentes</h1>
-                <p className="max-w-2xl text-left text-lg text-muted-foreground">Precisa de ajuda? Estamos aqui para você!</p>
+                <h2 className="text-sm font-medium text-gold">Precisa de ajuda? Estamos aqui para você!</h2>
+                <h1 className="scroll-m-20 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tighter">Perguntas frequentes</h1>
               </div>
               <div className='md:px-20 lg:px-0'>
                 <Accordion type="single" collapsible className="w-full">

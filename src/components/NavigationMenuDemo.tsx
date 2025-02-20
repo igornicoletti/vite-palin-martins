@@ -2,34 +2,43 @@
 
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
 import * as React from "react"
+import { Button } from './ui/button'
 
-export function NavigationMenuDemo() {
+export const NavigationMenuDemo = () => {
   return (
     <NavigationMenu>
-      <NavigationMenuList>
+      <NavigationMenuList className='space-x-12'>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-1 p-4 md:w-[400px] lg:w-xs">
-              <ListItem href="/docs" title="Empresa">Re-usable components built using Radix UI and Tailwind CSS.</ListItem>
-              <ListItem href="/docs/" title="Serviços">Styles for headings, paragraphs, lists...etc</ListItem>
-              <ListItem href="/docs/" title="Faq">How to install dependencies and structure your app.</ListItem>
-            </ul>
-          </NavigationMenuContent>
+          <NavigationMenuLink>Sobre</NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <a href="/docs">
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>Fale conosco</NavigationMenuLink>
-          </a>
+          <NavigationMenuLink>Serviços</NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink>Carreiras</NavigationMenuLink>
+        </NavigationMenuItem>
+        {/*   <NavigationMenuItem>
+          <NavigationMenuTrigger>Soluções</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid gap-1 p-4 md:w-[400px] lg:w-md">
+              <ListItem href="/docs" title="Sobre">Saiba mais sobre a trajetória, os valores e a essência que definem a nossa história</ListItem>
+              <ListItem href="/docs" title="Ecossistema">Com respeito e inovação como pilares, entregamos soluções que impulsionam o sucesso dos nossos clientes</ListItem>
+              <ListItem href="/docs" title="Serviços & Segmentos">Com presença em múltiplos segmentos, adaptamos soluções para maximizar resultados em cada mercado</ListItem>
+              <ListItem href="/docs" title="Soluções Personalizadas">Comprometidos em oferecer soluções que protejam e potencializem o sucesso do seu negócio</ListItem>
+              <ListItem href="/docs" title="Contato">Dúvida? Tornamos tudo mais simples e eficiente</ListItem>
+              <ListItem href="/docs" title="FAQ">Dúvida? Tornamos tudo mais simples e eficiente</ListItem>
+              <ListItem href="/docs" title="Carreiras">Junte-se ao nosso time e faça parte de um ambiente colaborativo e em constante crescimento</ListItem>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem> */}
+        <NavigationMenuItem>
+          <Button className="w-full" variant="secondary">Entre em contato conosco</Button>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

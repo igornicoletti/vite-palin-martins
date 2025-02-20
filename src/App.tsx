@@ -47,7 +47,7 @@ export const App = () => {
           {/* About us */}
           <section className="border-grid border-b">
             <div className="mx-auto w-full min-w-0 max-w-7xl">
-              <div className="py-16 px-6 md:py-32 md:px-8 space-y-16">
+              <div className="py-10 px-6 md:py-24 md:px-8 space-y-16">
                 <div className="mr-auto max-w-2xl space-y-4">
                   <h2 className="mb-2 text-sm font-medium text-gold md:text-left">Sobre nós</h2>
                   <h1 className="max-w-md scroll-m-20 text-4xl md:text-5xl lg:text-5xl font-bold leading-tight tracking-tighter md:text-left">
@@ -67,7 +67,7 @@ export const App = () => {
 
           {/* Expertise Tributária */}
           <div className="mx-auto w-full min-w-0 max-w-6xl">
-            <div className="py-16 px-6 md:py-32 md:px-8 space-y-16">
+            <div className="py-10 px-6 md:py-24 md:px-8 space-y-16">
               <div className="mx-auto max-w-2xl space-y-4">
                 <h2 className="mb-2 text-sm font-medium text-gold md:text-center">Nossas especialidades</h2>
                 <h1 className="scroll-m-20 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tighter md:text-center">Expertise Tributária</h1>
@@ -156,7 +156,7 @@ export const App = () => {
           {/* Contact us */}
           <div className="bg-foreground">
             <div className="mx-auto w-full min-w-0 max-w-7xl">
-              <div className="py-16 px-6 md:py-32 md:px-8 space-y-16">
+              <div className="py-10 px-6 md:py-24 md:px-8 space-y-16">
                 <div className="max-w-2xl space-y-4">
                   <h2 className="text-sm font-medium text-gold">Fale conosco</h2>
                   <h1 className="scroll-m-20 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tighter text-popover">Entre em Contato</h1>

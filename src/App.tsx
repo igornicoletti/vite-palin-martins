@@ -19,55 +19,61 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { LineChart } from 'lucide-react'
 
 export const App = () => {
   return (
     <>
 
-      {/* Sectors */}
-      <div className="mx-auto w-full min-w-0 max-w-4xl">
-        <div className="pt-12 md:pt-32 text-center space-y-2">
-          <h1 className="scroll-m-20 text-3xl md:text-5xl font-semibold tracking-tight">Nossas expertizes</h1>
-          <p className="text-base text-muted-foreground px-16">Compreendemos que cada setor possui suas particularidades e desafios únicos. Por isso, nos especializamos em oferecer soluções personalizadas para cada parceiro.</p>
-        </div>
-        <div className='pb-12 md:pb-32 pt-8'>
-          <Carousel className="w-full">
-            <CarouselContent className="-ml-1">
-              {sectorData.map((sector, i) => (
-                <CarouselItem key={i} className="pl-1 md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <Card className='py-2'>
-                      <CardHeader>
-                        <CardTitle>{sector.title}</CardTitle>
-                        <CardDescription>{sector.description}</CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <p>{sector.content}</p>
-                      </CardContent>
-                      <CardFooter>
-                        <p className='text-gold uppercase text-sm font-medium'>{sector.footer}</p>
-                      </CardFooter>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+      {/* expertises */}
+      <div className="mx-auto w-full min-w-0 max-w-5xl">
+        <div className="py-12 px-6 md:py-24 md:px-8 space-y-10">
+          <div className="mx-auto max-w-2xl space-y-4">
+            <h1 className="scroll-m-20 text-center text-3xl md:text-4xl font-bold tracking-tight">Expertise Tributária</h1>
+            <p className="text-center text-lg text-muted-foreground tracking-tight">
+              Cada segmento tem desafios e necessidades específicas. Por isso, oferecemos consultoria especializada e soluções tributárias personalizadas para otimizar sua gestão fiscal e impulsionar o crescimento do seu negócio.
+            </p>
+          </div>
+          <div className='px-6 md:px-20 lg:px-0'>
+            <Carousel className="w-full">
+              <CarouselContent className="-ml-1">
+                {expertiseData.map((expertise, i) => (
+                  <CarouselItem key={i} className="pl-1 md:basis-1/2 xl:basis-1/3">
+                    <div className="p-1">
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>{expertise.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <CardDescription>
+                            {expertise.description}
+                            <LineChart size={28} className='text-gold' />
+                          </CardDescription>
+                        </CardContent>
+                        <CardFooter>
+                          {expertise.content}
+                        </CardFooter>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
         </div>
       </div>
 
       {/* Contact */}
-      <div className="bg-black py-20">
-        <div className="mx-auto w-full min-w-0 max-w-5xl">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div className="pt-12 mb:pt-32 text-left space-y-2">
-              <h1 className="scroll-m-20 text-3xl md:text-5xl font-semibold tracking-tight text-white">Entre em contato</h1>
-              <p className="text-base text-muted-foreground">Pronto para explorar o que podemos fazer juntos? Nossa equipe está a apenas um bate-papo de distância!</p>
+      <div className="bg-foreground">
+        <div className="mx-auto w-full min-w-0 max-w-7xl">
+          <div className="py-12 px-6 md:py-24 md:px-8 space-y-10">
+            <div className="max-w-2xl space-y-4">
+              <h1 className="scroll-m-20 text-3xl md:text-4xl font-bold tracking-tight text-popover">Entre em contato</h1>
+              <p className="text-left text-lg text-muted-foreground tracking-tight">Precisa de soluções para otimizar a gestão e potencializar os resultados do seu negócio? Fale conosco e descubra como nossa expertise pode impulsionar o seu crescimento com segurança e eficiência.!</p>
             </div>
-            <div className='pb-12 md:pb-32 pt-8'>
-
+            <div className='px-10 md:px-20 lg:px-0'>
             </div>
           </div>
         </div>
@@ -75,19 +81,22 @@ export const App = () => {
 
       {/* FAQ */}
       <div className="mx-auto w-full min-w-0 max-w-5xl">
-        <div className="pt-12 md:pt-32 text-left space-y-2">
-          <h1 className="scroll-m-20 text-3xl md:text-4xl font-semibold tracking-tight">Perguntas frequentes</h1>
-          <p className="text-base text-muted-foreground">Precisa de ajuda? Estamos aqui para você!</p>
-        </div>
-        <div className='pb-12 md:pb-32 pt-8'>
-          <Accordion type="single" collapsible className="w-full">
-            {faqData.map((faq, i) => (
-              <AccordionItem key={i} value={`'item-'${+i}`}>
-                <AccordionTrigger>{faq.trigger}</AccordionTrigger>
-                <AccordionContent>{faq.content}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+        <div className="py-12 px-6 md:py-24 md:px-8 space-y-10">
+          <div className="max-w-2xl space-y-4">
+            <h1 className="scroll-m-20 text-3xl md:text-4xl font-bold tracking-tight">Perguntas frequentes</h1>
+            <p className="text-left text-lg text-muted-foreground tracking-tight">Precisa de ajuda? Estamos aqui para você!</p>
+          </div>
+
+          <div className='px-10 md:px-20 lg:px-0'>
+            <Accordion type="single" collapsible className="w-full">
+              {faqData.map((faq, i) => (
+                <AccordionItem key={i} value={`'item-'${+i}`}>
+                  <AccordionTrigger>{faq.trigger}</AccordionTrigger>
+                  <AccordionContent>{faq.content}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </div>
 
@@ -95,35 +104,36 @@ export const App = () => {
   )
 }
 
-const sectorData = [
+const expertiseData = [
   {
     title: 'Consultoria Tributária',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat veniam occaecat.',
-    content: 'Anim aute id magna aliqua ad ad non deserunt sunt. ',
+    description: 'Estratégias inteligentes para otimizar sua carga tributária.',
+    content: ' Identificamos oportunidades para reduzir encargos fiscais e garantir a conformidade da sua empresa com a legislação vigente. Conte com nossa expertise para uma gestão tributária eficiente e segura.',
     footer: 'Fale conosco',
+    icon: LineChart
   },
   {
     title: 'Recuperação de créditos de ICMS',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat',
-    content: 'Anim aute id magna aliqua ad ad non deserunt sunt. ',
+    description: 'Recupere valores pagos indevidamente e reduza custos.',
+    content: 'Realizamos uma análise detalhada das operações fiscais da sua empresa para identificar e recuperar créditos de ICMS, assegurando o correto aproveitamento de benefícios fiscais e melhorando a saúde financeira do seu negócio.',
     footer: 'Fale conosco',
   },
   {
     title: 'Compliance tributário',
-    description: 'Anim aute id magna aliqua ad ad non deserunt su id magna aliqua ad ad non deserunt sunt commodo.',
-    content: 'Anim aute id magna aliqua aliqua ad ad non deserunt ad ad non deserunt sunt. ',
+    description: 'Segurança e conformidade na gestão fiscal.',
+    content: 'Implementamos processos para garantir que sua empresa esteja sempre alinhada às exigências fiscais, evitando riscos, multas e penalidades. Reduza incertezas e atue com tranquilidade no mercado.',
     footer: 'Fale conosco',
   },
   {
     title: 'Recuperação de tributos federais',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. commodo. Elit sunt amet fugiat veniam occaecat.',
-    content: 'Anim aute id magna aliqua ad ad non deserunt sunt. ',
+    description: 'Recupere impostos pagos a mais e aumente sua lucratividade.',
+    content: 'Identificamos tributos federais pagos indevidamente e auxiliamos na recuperação desses valores, garantindo que sua empresa aproveite todos os benefícios fiscais disponíveis.',
     footer: 'Fale conosco',
   },
   {
     title: 'Serviços jurídicos',
-    description: 'Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.',
-    content: 'Anim aute id magna aliqua ad ad non deserunt aliqua ad ad non deserunt sunt. ',
+    description: 'Suporte jurídico estratégico para empresas.',
+    content: 'Nossa equipe especializada oferece assessoria jurídica em questões tributárias, societárias e empresariais, proporcionando segurança e soluções eficientes para sua empresa.',
     footer: 'Fale conosco',
   },
 ]

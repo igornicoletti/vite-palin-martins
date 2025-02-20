@@ -54,10 +54,9 @@ export const App = () => {
                     Excelência em Consultoria Tributária
                   </h1>
                   <div className='max-w-xl space-y-4'>
-                    <p className="text-lg text-muted-foreground">Com mais de 20 anos de experiência, <span className='font-medium'>a Palin & Martins é uma consultoria tributária de referência</span>, sediada em São José do Rio Preto, São Paulo.</p>
-                    <p className="text-lg text-muted-foreground">Nossa <span className='font-medium'>equipe, altamente qualificada</span>, atende pessoas físicas e jurídicas, destacando-se na recuperação de créditos de ICMS, por alcançar <span className='font-semibold'>resultados expressivos para nossos clientes</span>, além de atuar em Compliance Tributário, recuperação de tributos federais e serviços jurídicos.</p>
-                    <p className="text-lg text-muted-foreground">Sempre embasados na legislação, <span className='font-medium'>garantimos segurança e sustentabilidade</span> para seu negócio.</p>
-                    <p className="text-lg text-muted-foreground">Nosso compromisso é identificar as necessidades de cada cliente, proporcionando <span className='font-medium'>soluções personalizadas e eficazes que fortalecem seus negócios</span> e garantem plena satisfação.</p>
+                    <p className="text-lg text-muted-foreground">Com mais de 20 anos de experiência, a Palin & Martins é uma consultoria tributária de referência, sediada em São José do Rio Preto, São Paulo.</p>
+                    <p className="text-lg text-muted-foreground">Nossa equipe, altamente qualificada, atende pessoas físicas e jurídicas, destacando-se na recuperação de créditos de ICMS, por alcançar resultados expressivos para nossos clientes, além de atuar em Compliance Tributário, recuperação de tributos federais e serviços jurídicos. Sempre embasados na legislação, garantimos segurança e sustentabilidade para seu negócio.</p>
+                    <p className="text-lg text-muted-foreground">Nosso compromisso é identificar as necessidades de cada cliente, proporcionando soluções personalizadas e eficazes que fortalecem seus negócios e garantem plena satisfação.</p>
                   </div>
                 </div>
               </div>

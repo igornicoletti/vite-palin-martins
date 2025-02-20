@@ -19,7 +19,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { ArrowRight, CircleDollarSign, LineChart, Receipt, Scale, ShieldCheck } from 'lucide-react'
+import { CircleDollarSign, LineChart, Receipt, Scale, ShieldCheck } from 'lucide-react'
 import { Button } from './components/ui/button'
 
 export const App = () => {
@@ -103,14 +103,13 @@ export const App = () => {
                             </CardHeader>
                             <CardContent>
                               <CardDescription className='space-y-2'>
-                                <p>{expertise.description}</p>
                                 {expertise.contents.map((content, i) => (
                                   <p key={i}>{content}</p>
                                 ))}
                               </CardDescription>
                             </CardContent>
                             <CardFooter>
-                              <Button className="w-full">Saiba mais <ArrowRight size={14} /></Button>
+                              <Button className="w-full">{expertise.footer}</Button>
                             </CardFooter>
                           </Card>
                         </div>
@@ -170,12 +169,9 @@ const expertiseData = [
   {
     title: 'Consultoria Tributária',
     contents: [
-      'Estratégias inteligentes para otimizar sua carga tributária.',
-      'Identificamos oportunidades para reduzir encargos fiscais e garantir a conformidade da sua empresa com a legislação vigente.',
       'Conte com nossa expertise para uma gestão tributária eficiente e segura.',
+      'Identificamos oportunidades para reduzir encargos fiscais e garantir a conformidade da sua empresa com a legislação vigente.',
     ],
-    description: 'Estratégias inteligentes para otimizar sua carga tributária.',
-    content: 'Identificamos oportunidades para reduzir encargos fiscais e garantir a conformidade da sua empresa com a legislação vigente.',
     footer: 'Fale conosco',
     icon: LineChart
   },
